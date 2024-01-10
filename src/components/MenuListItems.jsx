@@ -53,9 +53,13 @@ const MenuListItems = () => {
           <ListItemButton
             sx={{
               color: "white",
+              "&: .MuiSvgIcon-root": {
+                color: "white",
+              },
               "&:hover": {
                 color: "red",
               },
+              "&:hover .MuiSvgIcon-root": { color: "red" },
             }}
           >
             <ListItemIcon style={{ color: "white" }}>{item.icon}</ListItemIcon>
