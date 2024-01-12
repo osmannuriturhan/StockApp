@@ -68,10 +68,10 @@ const useStockCalls = () => {
     }
   };
 
-  const putStock = async (url = "firms", id, info) => {
+  const putStock = async (url = "firms", info) => {
     dispatch(fetchStart());
     try {
-      await axiosWithToken.put(`/${url}/${id}`, info);
+      await axiosWithToken.put(`/${url}/${info._id}`, info);
       toastSuccessNotify(`${url} kaydı güncellenmiştir.`);
       getStocks(url);
     } catch (error) {
