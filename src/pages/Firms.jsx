@@ -12,7 +12,15 @@ const Firm = () => {
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setInfo({
+      name: "",
+      phone: "",
+      address: "",
+      image: "",
+    });
+    setOpen(false);
+  };
 
   useEffect(() => {
     // getFirms();

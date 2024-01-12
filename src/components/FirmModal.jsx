@@ -18,6 +18,12 @@ export default function FirmModal({ open, handleClose }) {
     setInfo({ ...info, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleClose();
+  };
+
+  console.log(info);
   return (
     <div>
       <Modal
@@ -27,7 +33,11 @@ export default function FirmModal({ open, handleClose }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={modalStyle}>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Box
+            sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+            component="form"
+            onSubmit={handleSubmit}
+          >
             <TextField
               label="Firm Name"
               name="name"
@@ -36,6 +46,7 @@ export default function FirmModal({ open, handleClose }) {
               variant="outlined"
               value={info.name}
               onChange={handleChange}
+              required
             />
             <TextField
               label="Phone"
@@ -45,6 +56,7 @@ export default function FirmModal({ open, handleClose }) {
               variant="outlined"
               value={info.phone}
               onChange={handleChange}
+              required
             />
             <TextField
               label="Address"
@@ -54,6 +66,7 @@ export default function FirmModal({ open, handleClose }) {
               variant="outlined"
               value={info.address}
               onChange={handleChange}
+              required
             />
             <TextField
               label="Image"
@@ -63,6 +76,7 @@ export default function FirmModal({ open, handleClose }) {
               variant="outlined"
               value={info.image}
               onChange={handleChange}
+              required
             />
             <Button type="submit" variant="contained" size="large">
               Submit
