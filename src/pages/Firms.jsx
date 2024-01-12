@@ -20,13 +20,8 @@ const Firm = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
-    setInfo({
-      name: "",
-      phone: "",
-      address: "",
-      image: "",
-    });
     setOpen(false);
+    setInfo({ name: "", phone: "", address: "", image: "" });
   };
 
   useEffect(() => {
