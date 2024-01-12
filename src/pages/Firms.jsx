@@ -29,11 +29,7 @@ const Firm = () => {
         NEW FIRM
       </Button>
 
-      <FirmModal
-        open={open}
-        handleClose={handleClose}
-        handleOpen={handleOpen}
-      />
+      <FirmModal open={open} handleClose={handleClose} />
 
       <Grid container gap={2} mt={3} justifyContent={"center"}>
         {firms?.map((firm) => (
