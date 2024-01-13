@@ -1758,7 +1758,7 @@
   dependencies:
     "@babel/runtime" "^7.23.6"
 
-"@mui/material@^5.0.0", "@mui/material@^5.11.14":
+"@mui/material@^5.0.0", "@mui/material@^5.11.14", "@mui/material@^5.4.1":
   version "5.15.3"
   resolved "https://registry.npmjs.org/@mui/material/-/material-5.15.3.tgz"
   integrity sha512-DODBBMouyq1B5f3YkEWL9vO8pGCxuEGqtfpltF6peMJzz/78tJFyLQsDas9MNLC/8AdFu2BQdkK7wox5UBPTAA==
@@ -1795,7 +1795,7 @@
     csstype "^3.1.2"
     prop-types "^15.8.1"
 
-"@mui/system@^5.15.3":
+"@mui/system@^5.15.3", "@mui/system@^5.4.1":
   version "5.15.3"
   resolved "https://registry.npmjs.org/@mui/system/-/system-5.15.3.tgz"
   integrity sha512-ewVU4eRgo4VfNMGpO61cKlfWmH7l9s6rA8EknRzuMX3DbSLfmtW2WJJg6qPwragvpPIir0Pp/AdWVSDhyNy5Tw==
@@ -1814,7 +1814,7 @@
   resolved "https://registry.npmjs.org/@mui/types/-/types-7.2.12.tgz"
   integrity sha512-3kaHiNm9khCAo0pVe0RenketDSFoZGAlVZ4zDjB/QNZV0XiCj+sh1zkX0VVhQPgYJDlBEzAag+MHJ1tU3vf0Zw==
 
-"@mui/utils@^5.15.3":
+"@mui/utils@^5.14.16", "@mui/utils@^5.15.3":
   version "5.15.3"
   resolved "https://registry.npmjs.org/@mui/utils/-/utils-5.15.3.tgz"
   integrity sha512-mT3LiSt9tZWCdx1pl7q4Q5tNo6gdZbvJel286ZHGuj6LQQXjWNAh8qiF9d+LogvNUI+D7eLkTnj605d1zoazfg==
@@ -1823,6 +1823,17 @@
     "@types/prop-types" "^15.7.11"
     prop-types "^15.8.1"
     react-is "^18.2.0"
+
+"@mui/x-data-grid@^6.18.7":
+  version "6.18.7"
+  resolved "https://registry.npmjs.org/@mui/x-data-grid/-/x-data-grid-6.18.7.tgz"
+  integrity sha512-K1A3pMUPxI4/Mt5A4vrK45fBBQK5rZvBVqRMrB5n8zX++Bj+WLWKvLTtfCmlriUtzuadr/Hl7Z+FDRXUJAx6qg==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
+    "@mui/utils" "^5.14.16"
+    clsx "^2.0.0"
+    prop-types "^15.8.1"
+    reselect "^4.1.8"
 
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
@@ -8302,6 +8313,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
+
+reselect@^4.1.8:
+  version "4.1.8"
+  resolved "https://registry.npmjs.org/reselect/-/reselect-4.1.8.tgz"
+  integrity sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==
 
 reselect@^5.0.1:
   version "5.1.0"
