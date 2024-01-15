@@ -80,64 +80,64 @@ const useStockCalls = () => {
     }
   };
 
-  const getBrands = async (url = "brands") => {
-    dispatch(fetchStart());
-    try {
-      const { data } = await axiosWithToken(`/${url}/`);
-      const apiData = data.data;
-      dispatch(getStockSuccess({ apiData, url }));
-    } catch (error) {
-      dispatch(fetchFail());
-      toastErrorNotify(`${url} bilgileri çekilemedi.`);
-      console.log(error);
-    }
-  };
+  // const getBrands = async (url = "brands") => {
+  //   dispatch(fetchStart());
+  //   try {
+  //     const { data } = await axiosWithToken(`/${url}/`);
+  //     const apiData = data.data;
+  //     dispatch(getStockSuccess({ apiData, url }));
+  //   } catch (error) {
+  //     dispatch(fetchFail());
+  //     toastErrorNotify(`${url} bilgileri çekilemedi.`);
+  //     console.log(error);
+  //   }
+  // };
 
-  const postBrand = async (url = "brands", info) => {
-    dispatch(fetchStart());
-    try {
-      await axiosWithToken.post(`/${url}/`, info);
-      toastSuccessNotify(`${url} kaydı eklenmiştir.`);
-      getStocks(url);
-    } catch (error) {
-      dispatch(fetchFail());
-      toastErrorNotify(`${url} kaydı eklenememiştir.`);
-    }
-  };
+  // const postBrand = async (url = "brands", info) => {
+  //   dispatch(fetchStart());
+  //   try {
+  //     await axiosWithToken.post(`/${url}/`, info);
+  //     toastSuccessNotify(`${url} kaydı eklenmiştir.`);
+  //     getStocks(url);
+  //   } catch (error) {
+  //     dispatch(fetchFail());
+  //     toastErrorNotify(`${url} kaydı eklenememiştir.`);
+  //   }
+  // };
 
-  const putBrand = async (url = "brands", info) => {
-    dispatch(fetchStart());
-    try {
-      await axiosWithToken.put(`/${url}/${info._id}`, info);
-      toastSuccessNotify(`${url} kaydı güncellenmiştir.`);
-      getStocks(url);
-    } catch (error) {
-      dispatch(fetchFail());
-      toastErrorNotify(`${url} kaydı güncellenememiştir.`);
-    }
-  };
+  // const putBrand = async (url = "brands", info) => {
+  //   dispatch(fetchStart());
+  //   try {
+  //     await axiosWithToken.put(`/${url}/${info._id}`, info);
+  //     toastSuccessNotify(`${url} kaydı güncellenmiştir.`);
+  //     getStocks(url);
+  //   } catch (error) {
+  //     dispatch(fetchFail());
+  //     toastErrorNotify(`${url} kaydı güncellenememiştir.`);
+  //   }
+  // };
 
-  const deleteBrand = async (url = "brands", id) => {
-    dispatch(fetchStart());
-    try {
-      await axiosWithToken.delete(`/${url}/${id}`);
-      toastSuccessNotify(`${url} bilgisi silindi.`);
-      getStocks(url);
-    } catch (error) {
-      dispatch(fetchFail());
-      toastErrorNotify(`${url} silinemedi.`);
-    }
-  };
+  // const deleteBrand = async (url = "brands", id) => {
+  //   dispatch(fetchStart());
+  //   try {
+  //     await axiosWithToken.delete(`/${url}/${id}`);
+  //     toastSuccessNotify(`${url} bilgisi silindi.`);
+  //     getStocks(url);
+  //   } catch (error) {
+  //     dispatch(fetchFail());
+  //     toastErrorNotify(`${url} silinemedi.`);
+  //   }
+  // };
 
   return {
     getStocks,
-    getBrands,
     deleteStock,
     postStock,
     putStock,
-    postBrand,
-    putBrand,
-    deleteBrand,
+    // getBrands,
+    // postBrand,
+    // putBrand,
+    // deleteBrand,
   };
 };
 

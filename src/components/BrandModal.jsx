@@ -1,69 +1,68 @@
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
+import React from "react";
 import { modalStyle } from "../styles/globalStyles";
-import { Button, TextField } from "@mui/material";
-import useStockCalls from "../service/useStockCalls";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import TextField from "@mui/material/TextField";
+import useStockCall from "../service/useStockCalls";
 
 export default function BrandModal({ open, handleClose, info, setInfo }) {
-  const { postBrand, putBrand } = useStockCalls();
+  const { postStock, putStock } = useStockCall();
 
   const handleChange = (e) => {
-    // const { name, value } = e.target;
-    // setInfo({ ...info, [name]: value });
+    e.preventDefault();
     setInfo({ ...info, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (info._id) {
-      putBrand("brands", info);
-    } else {
-      postBrand("brands", info);
-    }
 
+    if (info._id) {
+      putStock("brands", info);
+    } else {
+      postStock("brands", info);
+    }
     handleClose();
   };
 
   return (
-    <div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={modalStyle}>
-          <Box
-            sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-            component="form"
-            onSubmit={handleSubmit}
-          >
-            <TextField
-              label="Firm Name"
-              name="name"
-              id="name"
-              type="text"
-              variant="outlined"
-              value={info.name}
-              onChange={handleChange}
-              required
-            />
-            <TextField
-              label="Image"
-              name="image"
-              id="image"
-              type="url"
-              variant="outlined"
-              value={info.image}
-              onChange={handleChange}
-              required
-            />
-            <Button type="submit" variant="contained" size="large">
-              {info._id ? "Update Firm" : "Add Firm"}
-            </Button>
-          </Box>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={modalStyle}>
+        <Box
+          sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+          component={"form"}
+          onSubmit={handleSubmit}
+        >
+          <TextField
+            label="Brand Name"
+            name="name"
+            id="name"
+            type="text"
+            variant="outlined"
+            value={info.name}
+            onChange={handleChange}
+            required
+          />
+
+          <TextField
+            label="Image Url"
+            name="image"
+            id="image"
+            type="url"
+            variant="outlined"
+            value={info.image}
+            onChange={handleChange}
+          />
+
+          <Button type="submit" variant="contained" size="large">
+            Save Brand
+          </Button>
         </Box>
-      </Modal>
-    </div>
+      </Box>
+    </Modal>
   );
 }
