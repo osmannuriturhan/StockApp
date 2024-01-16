@@ -2,6 +2,8 @@
 
 ## Stock APP
 
+## Proje Hakkında
+
 ## `Kullanilan Kutuphaneler`
 
 - `@reduxjs/toolkit`
