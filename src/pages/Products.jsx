@@ -3,10 +3,9 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import useStockCalls from "../service/useStockCalls";
 import { useSelector } from "react-redux";
-import { Grid } from "@mui/material";
 import ProductModal from "../components/ProductModal";
 import ProductTable from "../components/ProductTable";
-import { ErrorMsg, NoDataMsg } from "../components/DataFetchMsg";
+import TableSkeleton, { ErrorMsg, NoDataMsg } from "../components/DataFetchMsg";
 
 const Products = () => {
   // const { getFirms, getSales } = useStockCalls()
@@ -23,11 +22,14 @@ const Products = () => {
     setInfo(initialState);
   };
 
-  useEffect(() => {
-    getStocks("products");
-    // getStocks("categories")
-    // getStocks("brands")
-  }, []);
+  useEffect(
+    () => {
+      getStocks("products");
+      getStocks("categories");
+      getStocks("brands");
+    },
+    [] // eslint-disable-line
+  );
 
   return (
     <div>
@@ -46,10 +48,11 @@ const Products = () => {
       />
 
       {error && <ErrorMsg />}
+      {loading && <TableSkeleton />}
 
-      {!error && !products.lenght && <NoDataMsg />}
+      {!error && !loading && !products.length && <NoDataMsg />}
 
-      {!error && <ProductTable />}
+      {!loading && !error && products.length > 0 && <ProductTable />}
     </div>
   );
 };

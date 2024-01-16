@@ -4,10 +4,12 @@ import useStockCalls from "../service/useStockCalls";
 import { useSelector } from "react-redux";
 import FirmCard from "../components/FirmCard";
 import FirmModal from "../components/FirmModal";
+import { CardSkeleton, ErrorMsg, NoDataMsg } from "../components/DataFetchMsg";
 
 const Firm = () => {
   // const { getFirms, getSales } = useStockCalls();
   const { getStocks } = useStockCalls();
+  const { error, loading } = useSelector((state) => state.stock);
   const { firms } = useSelector((state) => state.stock);
 
   const [info, setInfo] = useState({
@@ -24,11 +26,14 @@ const Firm = () => {
     setInfo({ name: "", phone: "", address: "", image: "" });
   };
 
-  useEffect(() => {
-    // getFirms();
-    // getSales();
-    getStocks("firms");
-  }, []);
+  useEffect(
+    () => {
+      // getFirms();
+      // getSales();
+      getStocks("firms");
+    },
+    [] // eslint-disable-line
+  );
 
   return (
     <div>
@@ -46,13 +51,24 @@ const Firm = () => {
         setInfo={setInfo}
       />
 
-      <Grid container gap={2} mt={3} justifyContent={"center"}>
-        {firms?.map((firm) => (
-          <Grid item key={firm._id}>
-            <FirmCard firm={firm} handleOpen={handleOpen} setInfo={setInfo} />
-          </Grid>
-        ))}
-      </Grid>
+      {error && <ErrorMsg />}
+      {loading && (
+        <CardSkeleton>
+          <FirmCard />
+        </CardSkeleton>
+      )}
+
+      {!error && !loading && !firms.length && <NoDataMsg />}
+
+      {!loading && !error && firms.length > 0 && (
+        <Grid container gap={2} mt={3} justifyContent={"center"}>
+          {firms?.map((firm) => (
+            <Grid item key={firm._id}>
+              <FirmCard firm={firm} handleOpen={handleOpen} setInfo={setInfo} />
+            </Grid>
+          ))}
+        </Grid>
+      )}
     </div>
   );
 };
