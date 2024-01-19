@@ -62,13 +62,11 @@ export default function PurchaseModal({ open, handleClose, info, setInfo }) {
                   Add New Firm
                 </MenuItem>
                 <hr />
-                {firms?.map((item) => {
-                  return (
-                    <MenuItem key={item._id} value={item._id}>
-                      {item.name}
-                    </MenuItem>
-                  );
-                })}
+                {firms?.map((item) => (
+                  <MenuItem key={item._id} value={item._id}>
+                    {item.name}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
             <FormControl>

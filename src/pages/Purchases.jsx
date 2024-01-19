@@ -7,7 +7,7 @@ import TableSkeleton, { ErrorMsg, NoDataMsg } from "../components/DataFetchMsg";
 import { useSelector } from "react-redux";
 
 const Purchases = () => {
-  const { getStocks } = useStockCalls();
+  const { getProPurBranFirm } = useStockCalls();
   const { error, loading, purchases } = useSelector((state) => state.stock);
 
   const [open, setOpen] = useState(false);
@@ -28,10 +28,12 @@ const Purchases = () => {
   };
 
   useEffect(() => {
-    getStocks("products");
-    getStocks("purchases");
-    getStocks("brands");
-    getStocks("firms");
+    // getStocks("products");
+    // getStocks("purchases");
+    // getStocks("brands");
+    // getStocks("firms");
+
+    getProPurBranFirm();
   }, []); // eslint-disable-line
 
   return (
@@ -49,8 +51,8 @@ const Purchases = () => {
 
       {error && <ErrorMsg />}
       {loading && <TableSkeleton />}
-      {!loading && !purchases?.length && <NoDataMsg />}
-      {!loading && purchases?.length > 0 && (
+      {!error && !loading && !purchases?.length && <NoDataMsg />}
+      {!error && !loading && purchases?.length > 0 && (
         <PurchaseTable setInfo={setInfo} handleOpen={handleOpen} />
       )}
     </Container>

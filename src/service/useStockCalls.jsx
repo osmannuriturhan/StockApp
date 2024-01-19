@@ -1,5 +1,10 @@
 import { useDispatch } from "react-redux";
-import { fetchFail, fetchStart, getStockSuccess } from "../features/stockSlice";
+import {
+  fetchFail,
+  fetchStart,
+  getProPurBranFirmSuccess,
+  getStockSuccess,
+} from "../features/stockSlice";
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 import useAxios from "./useAxios";
 
@@ -41,6 +46,28 @@ const useStockCalls = () => {
       dispatch(fetchFail());
       toastErrorNotify(`${url} bilgileri çekilemedi.`);
       console.log(error);
+    }
+  };
+
+  const getProPurBranFirm = async () => {
+    dispatch(fetchStart());
+    try {
+      const [products, purchases, brands, firms] = await Promise.all([
+        axiosWithToken("/products/"),
+        axiosWithToken("/purchases/"),
+        axiosWithToken("/brands/"),
+        axiosWithToken("/firms/"),
+      ]);
+      dispatch(
+        getProPurBranFirmSuccess([
+          products?.data?.data,
+          purchases?.data?.data,
+          brands?.data?.data,
+          firms?.data?.data,
+        ])
+      );
+    } catch (error) {
+      dispatch(fetchFail());
     }
   };
 
@@ -134,6 +161,7 @@ const useStockCalls = () => {
     deleteStock,
     postStock,
     putStock,
+    getProPurBranFirm,
     // getBrands,
     // postBrand,
     // putBrand,
