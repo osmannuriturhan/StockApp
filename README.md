@@ -4,7 +4,7 @@
 
 ## Proje Hakkında
 
-## `Kullanilan Kutuphaneler`
+## Kullanilan Kutuphaneler
 
 - `@reduxjs/toolkit`
 - `react-redux`
