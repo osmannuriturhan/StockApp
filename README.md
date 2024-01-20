@@ -4,6 +4,8 @@
 
 ## Proje Hakkında
 
+##
+
 ## Kullanilan Kutuphaneler
 
 - `@reduxjs/toolkit`
