@@ -5,7 +5,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -14,6 +13,7 @@ import { useSelector } from "react-redux";
 import useAuthCalls from "../service/useAuthCalls";
 import MenuListItems from "../components/MenuListItems";
 import { Outlet } from "react-router-dom";
+import Image from "../assets/12.jpg";
 
 const drawerWidth = 200;
 
@@ -59,7 +59,27 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <img
+              src={Image}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+              }}
+              alt=""
+            />
             Stock App
           </Typography>
 
