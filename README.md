@@ -24,4 +24,6 @@
 - `@emotion/react`
 - `@emotion/styled`
 
+![Ms1](https://github.com/osmannuriturhan/StockApp/assets/140538437/71622203-ea28-4a31-bc21-6ed4574bbb79)
+![Ms2](https://github.com/osmannuriturhan/StockApp/assets/140538437/34025f0d-060e-4b59-bbc2-d0938347deab)
 
