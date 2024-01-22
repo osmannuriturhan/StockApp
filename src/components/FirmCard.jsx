@@ -20,8 +20,15 @@ export default function FirmCard({ firm, handleOpen, setInfo }) {
         alignItems: "center",
         justifyContent: "space-between",
         width: "300px",
-        height: "400px",
+        height: "450px",
         p: 2,
+        boxShadow: "0 0 10px rgba(0,0,0,0.5)",
+        borderRadius: "40px",
+        transition: "all 0.5s ease-in-out",
+        border: "3px solid #000",
+        ":hover": {
+          transform: "scale(1.03)",
+        },
       }}
     >
       <CardContent>

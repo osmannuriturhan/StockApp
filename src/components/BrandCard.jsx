@@ -21,6 +21,13 @@ const BrandCard = ({ brand, handleOpen, setInfo }) => {
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
+        boxShadow: "0 0 10px rgba(0,0,0,0.5)",
+        borderRadius: "40px",
+        transition: "all 0.5s ease-in-out",
+        border: "3px solid #000",
+        ":hover": {
+          transform: "scale(1.03)",
+        },
       }}
     >
       <CardHeader title={brand?.name} />
