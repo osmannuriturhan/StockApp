@@ -2,7 +2,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import LockIcon from "@mui/icons-material/Lock";
-import image from "../assets/result.svg";
+import Image from "../assets/12.jpg";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
@@ -34,7 +34,7 @@ const Register = () => {
         <Grid item xs={12} sm={10} md={6}>
           <Avatar
             sx={{
-              backgroundColor: "secondary.light",
+              backgroundColor: "darkred",
               m: "auto",
               width: 40,
               height: 40,
@@ -42,12 +42,7 @@ const Register = () => {
           >
             <LockIcon size="30" />
           </Avatar>
-          <Typography
-            variant="h4"
-            align="center"
-            mb={2}
-            color="secondary.light"
-          >
+          <Typography variant="h4" align="center" mb={2} color="darkred">
             Register
           </Typography>
 
@@ -75,7 +70,13 @@ const Register = () => {
 
         <Grid item xs={0} sm={7} md={6}>
           <Container>
-            <img src={image} alt="" />
+            <img
+              src={Image}
+              style={{
+                borderRadius: "50%",
+              }}
+              alt=""
+            />
           </Container>
         </Grid>
       </Grid>
