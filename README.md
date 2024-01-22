@@ -32,7 +32,7 @@
 <img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/45d39d4c-8009-4332-ac98-f5b6d7985913">
 <img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/eeb25c46-4a35-4c1c-b1a4-786e8700d0ed">
 <img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/4a2223e3-6771-436a-b78a-22d97011026f">
-<img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/a75f023b-812e-42c7-81a6-5739ba7811ad" width="150" height="300" alt="Telefon Resmi1"><img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/127c1998-71a3-4cfb-ada5-5beda676dac4" width="150" height="300" alt="Telefon Resmi2"><img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/b9f16467-f02d-462e-af6c-27ecb4a5018c" width="150" height="300" alt="Telefon Resmi3"><img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/9b7dfbd4-180e-409f-aae5-d87fd1ee8d51" width="150" height="300" alt="Telefon Resmi4">
+<img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/a75f023b-812e-42c7-81a6-5739ba7811ad" width="250" height="500" alt="Telefon Resmi1"><img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/127c1998-71a3-4cfb-ada5-5beda676dac4" width="250" height="500" alt="Telefon Resmi2"><img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/b9f16467-f02d-462e-af6c-27ecb4a5018c" width="250" height="500" alt="Telefon Resmi3"><img src="https://github.com/osmannuriturhan/StockApp/assets/140538437/9b7dfbd4-180e-409f-aae5-d87fd1ee8d51" width="250" height="500" alt="Telefon Resmi4">
 
 
 
