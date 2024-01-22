@@ -32,6 +32,6 @@
 ![ms6](https://github.com/osmannuriturhan/StockApp/assets/140538437/45d39d4c-8009-4332-ac98-f5b6d7985913)
 ![ms7](https://github.com/osmannuriturhan/StockApp/assets/140538437/eeb25c46-4a35-4c1c-b1a4-786e8700d0ed)
 ![ms8](https://github.com/osmannuriturhan/StockApp/assets/140538437/4a2223e3-6771-436a-b78a-22d97011026f)
-![Telefon](https://github.com/osmannuriturhan/StockApp/assets/140538437/a75f023b-812e-42c7-81a6-5739ba7811ad)![Telefon2](https://github.com/osmannuriturhan/StockApp/assets/140538437/127c1998-71a3-4cfb-ada5-5beda676dac4)
+![Telefon](https://github.com/osmannuriturhan/StockApp/assets/140538437/a75f023b-812e-42c7-81a6-5739ba7811ad  {width=100px height=100px})![Telefon2](https://github.com/osmannuriturhan/StockApp/assets/140538437/127c1998-71a3-4cfb-ada5-5beda676dac4)
 
 
