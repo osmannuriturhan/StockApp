@@ -11,7 +11,7 @@
 - Arama ve Filtreleme: Ürün adı, kategori veya stok seviyesine göre arama
 
 ## Kullanılan Teknolojiler
-- Frontend: React.js, Next.js
+- Frontend: React.js
 - Backend:  Node.js,
 
 ## `Kullanilan Kutuphaneler`
